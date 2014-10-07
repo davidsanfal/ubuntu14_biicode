@@ -1,7 +1,7 @@
 #
 # Ubuntu Dockerfile
 #
-# https://github.com/dockerfile/ubuntu
+# https://github.com/davidsanfal/ubuntu14_biicode
 #
 
 # Pull base image.
