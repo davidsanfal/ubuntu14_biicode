@@ -34,7 +34,7 @@ You have two options:
 Run the following command to download and run the docker container.
 
 ```
-docker run -t -i davidsanfal/ubuntu14_biicode:latest /bin/bash
+sudo docker run -t -i davidsanfal/ubuntu14_biicode:latest /bin/bash
 
 root@dc7e87dcfc2b:~#
 ```
@@ -53,9 +53,9 @@ Run the following commands to clone de [github repository](https://github.com/da
 git clone https://github.com/davidsanfal/ubuntu14_biicode.git
 cd ubuntu14_biicode
 
-docker build -t biicode .
+sudo docker build -t biicode .
 
-docker run -t -i biicode /bin/bash
+sudo docker run -t -i biicode /bin/bash
 
 root@dc7e87dcfc2b:~#
 ```
@@ -74,7 +74,7 @@ Now, let’s make an [example with SQLite](http://docs.biicode.com/c++/examples/
 First, open and build the [examples/sqlite_basic](http://www.biicode.com/examples/sqlite_basic) block.
 
 ```
-docker run -t -i --rm davidsanfal/ubuntu14_biicode:latest /bin/bash
+sudo docker run -t -i --rm davidsanfal/ubuntu14_biicode:latest /bin/bash
 biiuser@f2307c434162:~$ bii init sql
 Successfully initialized biicode project sql
 cbiiuser@f2307c434162:~$ cd sql
