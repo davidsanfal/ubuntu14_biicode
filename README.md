@@ -3,7 +3,7 @@
 Docker image with:
 
 *  [ubuntu 14.04](https://registry.hub.docker.com/_/ubuntu/)
-*  [bicode](https://www.biicode.com/) pre-installed
+*  [biicode](https://www.biicode.com/) pre-installed
 *  [C/C++ Tools](http://docs.biicode.com/c++/installation.html#install-c-c-tools) pre-installed
 
 ##Supported tags and respective `Dockerfile` links
