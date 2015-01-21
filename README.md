@@ -18,7 +18,7 @@ Our tool is based in CMake and has been integrated with Koding.org, ArchLinux or
 
 > [bicode](https://www.biicode.com/)
 
-![biicode](docs/biicode-logo.png)
+![biicode](https://raw.githubusercontent.com/davidsanfal/ubuntu14_biicode/master/docs/biicode-logo.png)
 
 ##How to use this image
 
