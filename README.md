@@ -41,8 +41,7 @@ root@dc7e87dcfc2b:~#
 Now, try the biicode installation.
 
 ```
-root@dc7e87dcfc2b:~#  bii
-ERROR: None or bad command. Type "bii --help" for available commands
+root@dc7e87dcfc2b:~#  bii --version
 ```
 
 ###Build the Docker image
@@ -63,8 +62,7 @@ root@dc7e87dcfc2b:~#
 Now, try the biicode installation.
 
 ```
-root@dc7e87dcfc2b:~#  bii
-ERROR: None or bad command. Type "bii --help" for available commands
+root@dc7e87dcfc2b:~#  bii --version
 ```
 
 ##How to use biicode inside the docker container
