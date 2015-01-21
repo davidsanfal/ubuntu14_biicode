@@ -16,7 +16,7 @@ biicode is a tech start-up based in Madrid, Spain. We develop a `multi-platform 
 
 Our tool is based in CMake and has been integrated with Koding.org, ArchLinux or Travis CI and our articles have been featured in the [ISO C++ committee’s site](http://isocpp.org/blog/2014/09/zeromq-biicode).
 
-> [bicode](https://www.biicode.com/)
+> [biicode](https://www.biicode.com/)
 
 ![biicode](https://raw.githubusercontent.com/davidsanfal/ubuntu14_biicode/master/docs/biicode-logo.png)
 
