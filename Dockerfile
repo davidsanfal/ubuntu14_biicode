@@ -9,20 +9,23 @@ FROM ubuntu:14.04
 
 # Install.
 
-ADD apt_rep/ /etc/apt/sources.list.d/
-
 RUN \
   apt-get update && \
   apt-get install -y build-essential && \
   apt-get install -y wget && \
-  wget -O /etc/apt/trusted.gpg.d/biicode.gpg http://apt.biicode.com/keyring.gpg && \
-  apt-get update && \
-  apt-get -y install biicode
+  wget http://apt.biicode.com/install.sh && \
+  chmod +x install.sh && \
+  ./install.sh
 
+# Create biicode user
+RUN groupadd -f biiuser
+RUN useradd -m -d /home/biiuser -s /bin/bash -c "biiuser docker dev" -g biiuser biiuser
+RUN su biiuser
+RUN echo "biiuser ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/biiuser
+
+# Set environment.
+
+USER biiuser
+WORKDIR /home/biiuser
+ENV HOME /home/biiuser
 RUN bii setup:cpp
-
-# Set environment variables.
-ENV HOME /root
-
-# Define working directory.
-WORKDIR /root
