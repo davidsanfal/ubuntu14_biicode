@@ -14,7 +14,7 @@ Docker image with:
 
 biicode is a tech start-up based in Madrid, Spain. We develop a `multi-platform C and C++ dependency manager` with a hosting service (like Maven and Maven central for Java but for C and C++). We want code reuse made simple.
 
-Our tool is based in CMake and has been integrated with Koding.org, ArchLinux or Travis CI and our articles have been featured in the [ISO C++ committee’s site](http://isocpp.org/blog/2014/09/zeromq-biicode).
+Our uses CMake as build system and has been integrated with Koding.org or Travis CI and our articles have been featured in the [ISO C++ committee’s site](http://isocpp.org/blog/2014/09/zeromq-biicode).
 
 > [biicode](https://www.biicode.com/)
 
@@ -26,7 +26,7 @@ First of all, you need to have [docker installed](https://docs.docker.com/instal
 
 You have two options:
 
-*  Use the Dokerhub Image.
+*  Use the Dockerhub Image.
 *  Build the image manually.
 
 ###Dockerhub Image
@@ -36,12 +36,12 @@ Run the following command to download and run the docker container.
 ```
 sudo docker run -t -i davidsanfal/ubuntu14_biicode:latest /bin/bash
 
-root@dc7e87dcfc2b:~#
+biiuser@f2307c434162:~$
 ```
 Now, try the biicode installation.
 
 ```
-root@dc7e87dcfc2b:~#  bii --version
+biiuser@f2307c434162b:~$ bii --version
 ```
 
 ###Build the Docker image
@@ -56,13 +56,13 @@ sudo docker build -t biicode .
 
 sudo docker run -t -i biicode /bin/bash
 
-root@dc7e87dcfc2b:~#
+biiuser@f2307c434162:~$
 ```
 
 Now, try the biicode installation.
 
 ```
-root@dc7e87dcfc2b:~#  bii --version
+biiuser@f2307c434162:~$ bii --version
 ```
 
 ##How to use biicode inside the docker container
@@ -73,13 +73,17 @@ First, open and build the [examples/sqlite_basic](http://www.biicode.com/example
 
 ```
 sudo docker run -t -i --rm davidsanfal/ubuntu14_biicode:latest /bin/bash
-biiuser@f2307c434162:~$ bii init sql
+
+~$ bii init sql
 Successfully initialized biicode project sql
-cbiiuser@f2307c434162:~$ cd sql
-biiuser@f2307c434162:~/sql$ bii open examples/sqlite_basic
+
+~$ cd sql
+
+~/sql$ bii open examples/sqlite_basic
 INFO: Processing changes...
 Opened examples/sqlite_basic: 0
-biiuser@f2307c434162:~/sql$ bii cpp:build
+
+~/sql$ bii cpp:build
 INFO: Processing changes...
 Running: cmake  -G "Unix Makefiles" -Wno-dev  ../cmake
 
@@ -91,7 +95,7 @@ Running: cmake  -G "Unix Makefiles" -Wno-dev  ../cmake
 Now, run the example.
 
 ```
-biiuser@f2307c434162:~/sql$ ./bin/examples_sqlite_basic_main 
+~/sql$ ./bin/examples_sqlite_basic_main 
 Opened database successfully
 
 SELECT, List Veggies
